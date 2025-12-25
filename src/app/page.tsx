@@ -9,27 +9,14 @@ export default function Home() {
           <div className="inline-block px-6 py-4 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 border border-purple-500/20 rounded-xl backdrop-blur-sm">
             <p className="text-sm sm:text-base text-[var(--text-secondary)]">
               💡 We discovered{" "}
-              <a
-                href="https://tailwindsql.xyz/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 font-medium transition-colors"
-              >
+              <a href="https://tailwindsql.xyz/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 font-medium transition-colors">
                 TailwindSQL
               </a>{" "}
-              and thought:{" "}
-              <span className="text-[var(--text-primary)] font-medium italic">
-                &quot;What if frontend devs could finally speak SQL?&quot;
-              </span>
+              and thought: <span className="text-[var(--text-primary)] font-medium italic">&quot;What if frontend devs could finally speak SQL?&quot;</span>
             </p>
             <p className="text-xs sm:text-sm text-[var(--text-secondary)]/70 mt-2">
               Forked with 💜 by{" "}
-              <a
-                href="https://branch42.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-400 hover:text-purple-300 font-medium transition-colors"
-              >
+              <a href="https://branch42.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
                 Branch42
               </a>{" "}
               — helping Tailwind lovers conquer databases, one className at a time.
@@ -40,17 +27,17 @@ export default function Home() {
         {/* Hero Section */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <div className="inline-block mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full">
-            <span className="text-cyan-400 text-sm font-medium">🎨 Like Tailwind, but for SQL</span>
+            <span className="text-cyan-300 text-sm font-medium">🎨 Inspired by TailwindSQL, rebuilt for frontend devs by Branch42</span>
           </div>
 
-          <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-[var(--brand-blue)] to-[var(--brand-pink)] text-transparent bg-clip-text px-2">
-            TailwindSQL - Branch42 Learn SQL with TailwindCSS!
+          <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[var(--brand-gold)] via-[var(--brand-blue)] to-[var(--brand-pink)] text-transparent bg-clip-text px-2 drop-shadow-[0_10px_40px_rgba(17,109,255,0.2)]">
+            TailwindSQL by Branch42 — Learn SQL in Tailwind classNames
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-[var(--text-secondary)] mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-            Query databases using intuitive className syntax.
+            We forked TailwindSQL so frontend developers can pick up SQL faster.
             <br className="hidden sm:block" />
-            <span className="text-[var(--accent-cyan)]">No complex SQL. Just simple, composable queries.</span>
+            <span className="text-[var(--accent-cyan)]">Crafted by Branch42 — book time at hello@branch42.com</span>
           </p>
 
           <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-2">
@@ -71,7 +58,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-8 px-2">
             <span className="badge badge-cyan">className Syntax</span>
             <span className="badge badge-brand-blue">Real-time Results</span>
-            <span className="badge badge-brand-pink">Visual JOINs</span>
+            <span className="badge badge-brand-gold">Agency Support</span>
             <span className="badge badge-green">No Setup Required</span>
           </div>
 
@@ -223,11 +210,47 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Agency Support CTA */}
+        <section className="mb-12 sm:mb-16 md:mb-20">
+          <div className="agency-card">
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-wide text-[var(--text-secondary)]">Branch42 Agency</p>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] leading-tight">Need help shipping production-ready data products?</h3>
+              <p className="text-[var(--text-secondary)] text-sm sm:text-base max-w-3xl">
+                We&apos;re the team that forked TailwindSQL to make SQL friendlier for frontend devs. Let us design, build, and secure your next dashboard, workflow, or SaaS — from schema to shipping.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href="https://cal.com/branch42-team/consultancy" className="btn-gradient" target="_blank" rel="noopener noreferrer">
+                  Book a consult ↗
+                </Link>
+                <Link href="mailto:hello@branch42.com" className="btn-outline">
+                  hello@branch42.com
+                </Link>
+              </div>
+            </div>
+            <div className="agency-card-panel">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-[var(--brand-blue)] to-[var(--brand-gold)] flex items-center justify-center text-black font-bold">B42</div>
+                <div>
+                  <p className="text-[var(--text-primary)] font-semibold">Branch42</p>
+                  <p>Full-stack product studio</p>
+                </div>
+              </div>
+              <p className="text-sm text-[var(--text-secondary)]">
+                Credits: TailwindSQL inspired this experience. We forked it, added lessons, data previews, and calendaring to help frontend developers build SQL muscle.
+              </p>
+              <p className="text-xs text-[var(--text-secondary)]/80">Stack: Next.js, React Server Components, SQLite. Deploy-ready with agency support.</p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="text-center mb-12 sm:mb-16 px-2">
-          <div className="glow-card p-8 sm:p-12 bg-gradient-to-br from-cyan-500/10 to-purple-500/10">
+          <div className="glow-card p-8 sm:p-12 bg-gradient-to-br from-[var(--brand-blue)]/15 via-[var(--brand-gold)]/12 to-[var(--accent-purple)]/15">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Ready to Start Learning?</h2>
-            <p className="text-[var(--text-secondary)] mb-6 sm:mb-8 max-w-2xl mx-auto">Start with guided lessons or jump straight into the playground</p>
+            <p className="text-[var(--text-secondary)] mb-6 sm:mb-8 max-w-2xl mx-auto">
+              Start with guided lessons or jump straight into the playground — and if you need an expert build team, Branch42 is one click away.
+            </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link href="/playground" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
                 Open Playground
@@ -238,6 +261,12 @@ export default function Home() {
               >
                 Start Lessons
               </Link>
+              <Link
+                href="mailto:hello@branch42.com"
+                className="px-8 py-4 border border-[var(--brand-gold)]/70 rounded-lg font-semibold text-[var(--text-primary)] hover:border-[var(--brand-blue)] transition-all"
+              >
+                Talk to Branch42
+              </Link>
             </div>
           </div>
         </section>
@@ -247,27 +276,30 @@ export default function Home() {
           <p>Built with 💜 using Next.js, React Server Components, and SQLite</p>
           <p className="text-[var(--text-secondary)]/70">
             Originally created by{" "}
-            <a
-              href="https://tailwindsql.xyz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors"
-            >
+            <a href="https://tailwindsql.xyz/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors">
               TailwindSQL
             </a>{" "}
             • Forked & enhanced by{" "}
-            <a
-              href="https://branch42.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors"
-            >
+            <a href="https://branch42.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">
               Branch42
             </a>
           </p>
-          <p className="text-[var(--text-secondary)]/50 text-xs">
-            className your way to database queries
+          <p className="text-[var(--text-secondary)]/70">
+            Contact:{" "}
+            <a href="mailto:hello@branch42.com" className="text-[var(--accent-cyan)] hover:text-[var(--brand-blue)] underline underline-offset-2 transition-colors">
+              hello@branch42.com
+            </a>{" "}
+            • Book:{" "}
+            <a
+              href="https://cal.com/branch42-team/consultancy"
+              className="text-[var(--accent-cyan)] hover:text-[var(--brand-blue)] underline underline-offset-2 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              cal.com/branch42-team/consultancy
+            </a>
           </p>
+          <p className="text-[var(--text-secondary)]/50 text-xs">className your way to database queries</p>
         </footer>
       </div>
     </main>
