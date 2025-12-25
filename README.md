@@ -1,12 +1,14 @@
-# TailwindSQL 🎨
+# TailwindSQL by Branch42 🎨
 
-> Like TailwindCSS, but for SQL queries in React Server Components.
+> Forked from [TailwindSQL](https://tailwindsql.xyz/) and rebuilt by [Branch42](https://branch42.com) to help frontend devs learn SQL with Tailwind-style classNames — plus agency-grade polish and booking.
 
-[![GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue?logo=github)](https://github.com/mmarinovic/tailwindsql)
+[![Original TailwindSQL](https://img.shields.io/badge/TailwindSQL-Original-blueviolet?logo=github)](https://github.com/mmarinovic/tailwindsql)
+[![Branch42](https://img.shields.io/badge/Branch42-Agency-gold)](https://branch42.com)
+[![Book a Consult](https://img.shields.io/badge/Cal.com-branch42--team%2Fconsultancy-116dff)](https://cal.com/branch42-team/consultancy)
 
 ## What is this?
 
-TailwindSQL lets you write SQL queries using Tailwind-style class names. Just use `className` to query your database directly in React Server Components!
+TailwindSQL lets you write SQL queries using Tailwind-style class names. Branch42 forked it to make the experience agency-ready: dark Branch42 theme, attribution, and a Cal.com floating button so you can book us to ship production dashboards and workflows.
 
 ```jsx
 // Fetch and render a user's name
@@ -21,7 +23,15 @@ TailwindSQL lets you write SQL queries using Tailwind-style class names. Just us
 <DB className="db-products-orderby-price-desc" as="table" />
 ```
 
-## Features
+## Branch42 additions
+
+- 🌓 Dark Branch42 palette (navy/blue/gold) and updated gradients/badges
+- 🤝 Clear attribution to the original TailwindSQL project
+- 📅 Cal.com floating button (namespace `consultancy`, link `branch42-team/consultancy`)
+- 📣 Agency CTA with email `hello@branch42.com` + booking link
+- 🔍 SEO metadata updated for Branch42
+
+## Features (original + still here)
 
 - 🎨 **Tailwind-style syntax** - Write SQL queries using familiar class names
 - ⚡ **React Server Components** - Zero client-side JavaScript for queries
@@ -37,12 +47,12 @@ db-{table}-{column}-where-{field}-{value}-limit-{n}-orderby-{field}-{asc|desc}
 
 ### Examples
 
-| Class Name | SQL Query |
-|------------|-----------|
-| `db-users` | `SELECT * FROM users` |
-| `db-users-name` | `SELECT name FROM users` |
-| `db-users-where-id-1` | `SELECT * FROM users WHERE id = 1` |
-| `db-posts-title-limit-10` | `SELECT title FROM posts LIMIT 10` |
+| Class Name                       | SQL Query                                    |
+| -------------------------------- | -------------------------------------------- |
+| `db-users`                       | `SELECT * FROM users`                        |
+| `db-users-name`                  | `SELECT name FROM users`                     |
+| `db-users-where-id-1`            | `SELECT * FROM users WHERE id = 1`           |
+| `db-posts-title-limit-10`        | `SELECT title FROM posts LIMIT 10`           |
 | `db-products-orderby-price-desc` | `SELECT * FROM products ORDER BY price DESC` |
 
 ## Getting Started
@@ -55,9 +65,9 @@ db-{table}-{column}-where-{field}-{value}-limit-{n}-orderby-{field}-{asc|desc}
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/mmarinovic/tailwindsql.git
-cd tailwindsql
+# Clone your fork
+git clone <your-fork-url> tailwindsql-branch42
+cd tailwindsql-branch42
 
 # Install dependencies
 npm install
@@ -81,14 +91,14 @@ Open [http://localhost:3000](http://localhost:3000) to see the demo and interact
 
 The `as` prop controls how results are rendered:
 
-| Value | Description |
-|-------|-------------|
-| `span` | Inline text (default) |
-| `div` | Block element |
-| `ul` | Unordered list |
-| `ol` | Ordered list |
-| `table` | HTML table |
-| `json` | JSON code block |
+| Value   | Description           |
+| ------- | --------------------- |
+| `span`  | Inline text (default) |
+| `div`   | Block element         |
+| `ul`    | Unordered list        |
+| `ol`    | Ordered list          |
+| `table` | HTML table            |
+| `json`  | JSON code block       |
 
 ## Project Structure
 
@@ -111,7 +121,14 @@ tailwindsql/
 
 ## Why?
 
-This project was built to explore css-driven database queries.
+- Original: explore CSS-driven database queries.
+- Branch42 fork: teach SQL to frontend devs, keep the learning fun, and make it easy to book an expert team if you need production-grade delivery.
+
+## Credits
+
+- Original concept & code: [TailwindSQL](https://tailwindsql.xyz/) by [mmarinovic](https://github.com/mmarinovic/tailwindsql)
+- Fork, theme, SEO, and Cal.com integration: [Branch42](https://branch42.com)
+- Contact: `hello@branch42.com` — Book: [cal.com/branch42-team/consultancy](https://cal.com/branch42-team/consultancy)
 
 ## License
 
