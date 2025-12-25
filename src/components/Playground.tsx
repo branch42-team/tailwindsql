@@ -8,6 +8,7 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 interface QueryResult {
   success?: boolean;
@@ -27,11 +28,12 @@ interface JoinState {
 }
 
 const EXAMPLE_QUERIES = [
-  { label: 'All users', value: 'db-users', join: null },
+  { label: 'All users', value: 'db-users-limit-10', join: null },
   { label: 'User names', value: 'db-users-name-limit-10', join: null },
-  { label: 'Products by price', value: 'db-products-title-orderby-price-desc-limit-5', join: null },
+  { label: 'Products by price', value: 'db-products-name-orderby-price-desc-limit-5', join: null },
   { label: 'Users + Posts', value: 'db-users-name-limit-5', join: { table: 'posts', on: 'id-author_id', select: 'title', type: 'left' as const } },
   { label: 'Posts + Authors', value: 'db-posts-title-limit-5', join: { table: 'users', on: 'author_id-id', select: 'name', type: 'left' as const } },
+  { label: 'Top Movies', value: 'db-movies-title-orderby-rating-desc-limit-10', join: null },
 ];
 
 const AS_OPTIONS = ['table', 'list', 'json'] as const;
@@ -42,7 +44,10 @@ const JOIN_TYPES = ['left', 'inner', 'right'] as const;
 const ITEMS_PER_PAGE = 10;
 
 export function Playground() {
-  const [className, setClassName] = useState('db-users-name-limit-5');
+  const searchParams = useSearchParams();
+  const queryParam = searchParams.get('q');
+  
+  const [className, setClassName] = useState(queryParam || 'db-users-name-limit-5');
   const [result, setResult] = useState<QueryResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [renderAs, setRenderAs] = useState<AsOption>('table');
@@ -438,16 +443,23 @@ export function Playground() {
         </div>
       </div>
 
-      {/* Generated SQL */}
+      {/* Traditional SQL Query */}
       {result?.query && (
-        <div className="bg-black/40 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm">
-          <div className="text-xs text-slate-500 uppercase tracking-wide mb-2">Generated SQL:</div>
-          <code className="text-purple-400 break-all whitespace-pre-wrap">{result.query}</code>
-          {result.params && result.params.length > 0 && (
-            <span className="text-slate-500 ml-1 sm:ml-2 block sm:inline mt-1 sm:mt-0">
-              [{result.params.join(', ')}]
-            </span>
-          )}
+        <div className="space-y-2">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wide">Traditional SQL Query:</div>
+          <div className="bg-black/50 rounded-lg p-4 border border-white/10">
+            <pre className="text-sm text-green-400 font-mono overflow-x-auto whitespace-pre-wrap">
+              {result.query}
+            </pre>
+            {result.params && result.params.length > 0 && (
+              <div className="mt-3 pt-3 border-t border-white/10">
+                <div className="text-xs text-slate-500 mb-1">Parameters:</div>
+                <code className="text-xs text-slate-400">
+                  [{result.params.map(p => typeof p === 'string' ? `"${p}"` : p).join(', ')}]
+                </code>
+              </div>
+            )}
+          </div>
         </div>
       )}
 

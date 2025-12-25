@@ -11,4 +11,8 @@ export {
 } from './Example';
 export { Playground } from './Playground';
 export { DatabaseExplorer } from './DatabaseExplorer';
+export { SQLPlayground } from './SQLPlayground';
+export { SQLEditor } from './SQLEditor';
+export { StepVisualization } from './StepVisualization';
+export { DataViewer } from './DataViewer';
 
