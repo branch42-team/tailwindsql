@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import CalFloatingButton from "@/components/CalFloatingButton";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -60,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <CalFloatingButton />
       </body>
+      <GoogleAnalytics gaId="G-H9X0CP8KT9" />
     </html>
   );
 }
