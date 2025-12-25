@@ -26,10 +26,7 @@ TailwindSQL lets you write SQL queries using Tailwind-style class names. Branch4
 ## Branch42 additions
 
 - 🌓 Dark Branch42 palette (navy/blue/gold) and updated gradients/badges
-- 🤝 Clear attribution to the original TailwindSQL project
-- 📅 Cal.com floating button (namespace `consultancy`, link `branch42-team/consultancy`)
-- 📣 Agency CTA with email `hello@branch42.com` + booking link
-- 🔍 SEO metadata updated for Branch42
+- Added courses with examples
 
 ## Features (original + still here)
 
