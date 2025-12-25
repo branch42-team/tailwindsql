@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import CalFloatingButton from "@/components/CalFloatingButton";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -39,7 +40,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className="gradient-bg grid-pattern min-h-screen">{children}</body>
+      <body className="gradient-bg grid-pattern min-h-screen">
+        {children}
+        <CalFloatingButton />
+      </body>
     </html>
   );
 }

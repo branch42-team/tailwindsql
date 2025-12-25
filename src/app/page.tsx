@@ -4,13 +4,46 @@ export default function Home() {
   return (
     <main className="min-h-screen py-8 sm:py-12 md:py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
+        {/* Attribution Banner */}
+        <div className="mb-8 sm:mb-12 text-center">
+          <div className="inline-block px-6 py-4 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 border border-purple-500/20 rounded-xl backdrop-blur-sm">
+            <p className="text-sm sm:text-base text-[var(--text-secondary)]">
+              💡 We discovered{" "}
+              <a
+                href="https://tailwindsql.xyz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 font-medium transition-colors"
+              >
+                TailwindSQL
+              </a>{" "}
+              and thought:{" "}
+              <span className="text-[var(--text-primary)] font-medium italic">
+                &quot;What if frontend devs could finally speak SQL?&quot;
+              </span>
+            </p>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)]/70 mt-2">
+              Forked with 💜 by{" "}
+              <a
+                href="https://branch42.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-400 hover:text-purple-300 font-medium transition-colors"
+              >
+                Branch42
+              </a>{" "}
+              — helping Tailwind lovers conquer databases, one className at a time.
+            </p>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <div className="inline-block mb-4 px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full">
             <span className="text-cyan-400 text-sm font-medium">🎨 Like Tailwind, but for SQL</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 text-transparent bg-clip-text px-2">
+          <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-cyan-400 via-[var(--brand-blue)] to-[var(--brand-pink)] text-transparent bg-clip-text px-2">
             TailwindSQL - Branch42 Learn SQL with TailwindCSS!
           </h1>
 
@@ -29,7 +62,7 @@ export default function Home() {
             </Link>
             <Link
               href="/lessons"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-[var(--bg-secondary)] border border-[var(--border)] rounded-lg font-semibold text-[var(--text-primary)] hover:border-[var(--accent-cyan)] transition-all text-sm sm:text-base"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-[var(--theme-secondary)] border border-[var(--border)] rounded-lg font-semibold text-black hover:border-[var(--accent-cyan)] transition-all text-sm sm:text-base"
             >
               Start Learning
             </Link>
@@ -37,8 +70,8 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-8 px-2">
             <span className="badge badge-cyan">className Syntax</span>
-            <span className="badge badge-purple">Real-time Results</span>
-            <span className="badge badge-pink">Visual JOINs</span>
+            <span className="badge badge-brand-blue">Real-time Results</span>
+            <span className="badge badge-brand-pink">Visual JOINs</span>
             <span className="badge badge-green">No Setup Required</span>
           </div>
 
@@ -71,15 +104,15 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="glow-card p-6">
+            <div className="glow-card p-6 border-[var(--brand-blue)]/20 hover:border-[var(--brand-blue)]/50 transition-colors">
               <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-2 text-[var(--accent-purple)]">2. See Live Results</h3>
+              <h3 className="text-xl font-bold mb-2 text-[var(--brand-blue)]">2. See Live Results</h3>
               <p className="text-[var(--text-secondary)] text-sm">Results update instantly as you type. See the generated SQL and choose how to render data.</p>
             </div>
 
-            <div className="glow-card p-6">
+            <div className="glow-card p-6 border-[var(--brand-pink)]/20 hover:border-[var(--brand-pink)]/50 transition-colors">
               <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-bold mb-2 text-[var(--accent-pink)]">3. Add JOINs Easily</h3>
+              <h3 className="text-xl font-bold mb-2 text-[var(--brand-pink)]">3. Add JOINs Easily</h3>
               <p className="text-[var(--text-secondary)] text-sm">Toggle JOIN mode and visually configure table relationships without complex syntax.</p>
             </div>
           </div>
@@ -201,7 +234,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/lessons"
-                className="px-8 py-4 bg-[var(--bg-secondary)] border border-[var(--border)] rounded-lg font-semibold text-[var(--text-primary)] hover:border-[var(--accent-cyan)] transition-all"
+                className="px-8 py-4 bg-[var(--theme-secondary)] border border-[var(--border)] rounded-lg font-semibold text-black hover:border-[var(--accent-cyan)] transition-all"
               >
                 Start Lessons
               </Link>
@@ -212,7 +245,29 @@ export default function Home() {
         {/* Footer */}
         <footer className="text-center text-[var(--text-secondary)] text-xs sm:text-sm space-y-3 px-2 pb-4">
           <p>Built with 💜 using Next.js, React Server Components, and SQLite</p>
-          <p className="text-[var(--text-secondary)]/70">TailwindSQL • className your way to database queries</p>
+          <p className="text-[var(--text-secondary)]/70">
+            Originally created by{" "}
+            <a
+              href="https://tailwindsql.xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors"
+            >
+              TailwindSQL
+            </a>{" "}
+            • Forked & enhanced by{" "}
+            <a
+              href="https://branch42.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors"
+            >
+              Branch42
+            </a>
+          </p>
+          <p className="text-[var(--text-secondary)]/50 text-xs">
+            className your way to database queries
+          </p>
         </footer>
       </div>
     </main>

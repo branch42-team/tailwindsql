@@ -26,6 +26,11 @@
   --sidebar-accent-foreground: #e0e0e0;
   --sidebar-border: #4a4a4a;
   --sidebar-ring: #fbc02d;
+  --theme-secondary: #FFBF23;
+  --brand-blue: #116DFF;
+  --brand-pink: #FFD7EF;
+  --brand-red: #FF5757;
+  --brand-green: #6BCB77;
   --font-sans: sans-serif;
   --font-serif: serif;
   --font-mono: monospace;
@@ -189,4 +194,45 @@ body {
   background: rgba(251, 146, 60, 0.15);
   color: #fb923c;
   border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+/* Branch42 Blue Vignette Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 0%, rgba(17, 109, 255, 0.03) 70%, rgba(17, 109, 255, 0.15) 100%);
+  z-index: 9999;
+}
+
+/* Scrollbar styling for a premium feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-blue);
+}
+
+/* Brand Badge Variants */
+.badge-brand-blue {
+    background: rgba(17, 109, 255, 0.15);
+    color: #116DFF;
+    border: 1px solid rgba(17, 109, 255, 0.3);
+}
+
+.badge-brand-pink {
+    background: rgba(255, 215, 239, 0.15);
+    color: #FFD7EF;
+    border: 1px solid rgba(255, 215, 239, 0.3);
 }

@@ -149,7 +149,7 @@ export function SQLPlayground() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
         <div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-[var(--brand-blue)] to-[var(--brand-pink)] text-transparent bg-clip-text">
             SQL Playground
           </h1>
           <p className="text-[var(--text-secondary)] text-sm mt-1">
@@ -185,7 +185,7 @@ export function SQLPlayground() {
               <button
                 onClick={executeQuery}
                 disabled={loading}
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-cyan-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                className="px-4 py-2 bg-[var(--brand-blue)] rounded-lg font-semibold text-white hover:bg-[#0056e0] hover:shadow-lg hover:shadow-[var(--brand-blue)]/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
                 {loading ? 'Running...' : '▶ Run Query'}
               </button>
