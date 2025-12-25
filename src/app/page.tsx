@@ -165,9 +165,7 @@ export default function Home() {
               <div className="text-xs text-[var(--text-secondary)] mb-3">
                 Tables: <span className="text-cyan-400">users, posts, comments</span>
               </div>
-              <div className="text-xs text-cyan-400 font-medium">
-                Click to try →
-              </div>
+              <div className="text-xs text-cyan-400 font-medium">Click to try →</div>
             </Link>
 
             <Link href="/playground?q=db-products-name-orderby-price-desc-limit-10" className="glow-card p-6 hover:border-[var(--accent-purple)] transition-all cursor-pointer group">
@@ -177,9 +175,7 @@ export default function Home() {
               <div className="text-xs text-[var(--text-secondary)] mb-3">
                 Tables: <span className="text-purple-400">customers, products, orders, order_items</span>
               </div>
-              <div className="text-xs text-purple-400 font-medium">
-                Click to try →
-              </div>
+              <div className="text-xs text-purple-400 font-medium">Click to try →</div>
             </Link>
 
             <Link href="/playground?q=db-movies-title-orderby-rating-desc-limit-10" className="glow-card p-6 hover:border-[var(--accent-pink)] transition-all cursor-pointer group">
@@ -189,9 +185,7 @@ export default function Home() {
               <div className="text-xs text-[var(--text-secondary)] mb-3">
                 Tables: <span className="text-pink-400">movies, actors, movie_actors, reviews</span>
               </div>
-              <div className="text-xs text-pink-400 font-medium">
-                Click to try →
-              </div>
+              <div className="text-xs text-pink-400 font-medium">Click to try →</div>
             </Link>
           </div>
         </section>

@@ -86,6 +86,13 @@ export function Playground() {
     }
   }, []);
 
+  // Update className when URL parameter changes
+  useEffect(() => {
+    if (queryParam && queryParam !== className) {
+      setClassName(queryParam);
+    }
+  }, [queryParam]);
+
   // Debounced fetch on className or join change
   useEffect(() => {
     const timer = setTimeout(() => {

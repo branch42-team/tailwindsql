@@ -1,5 +1,10 @@
 import { Playground } from '@/components/Playground';
 import Link from 'next/link';
+import { Suspense } from 'react';
+
+function PlaygroundContent() {
+  return <Playground />;
+}
 
 export default function PlaygroundPage() {
   return (
@@ -26,7 +31,9 @@ export default function PlaygroundPage() {
 
         {/* Playground */}
         <div className="glow-card p-6 sm:p-8">
-          <Playground />
+          <Suspense fallback={<div className="text-center py-12 text-[var(--text-secondary)]">Loading playground...</div>}>
+            <PlaygroundContent />
+          </Suspense>
         </div>
 
         {/* Syntax Guide */}
