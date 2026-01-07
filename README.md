@@ -8,7 +8,7 @@
 
 ## What is this?
 
-TailwindSQL lets you write SQL queries using Tailwind-style class names. Branch42 forked it to make the experience agency-ready: dark Branch42 theme, attribution, and a Cal.com floating button so you can book us to ship production dashboards and workflows.
+TailwindSQL lets you write SQL queries using Tailwind-style class names. Branch42 forked it to add more databases and a future plan to create learning courses
 
 ```jsx
 // Fetch and render a user's name
